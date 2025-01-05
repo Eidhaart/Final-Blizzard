@@ -1,4 +1,3 @@
-// i18n.js
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -9,9 +8,11 @@ import deCommon from "../public/locales/de/aboutMe.json";
 import frCommon from "../public/locales/fr/aboutMe.json";
 
 i18n.use(initReactI18next).init({
-  lng: "pl",
-
-  fallbackLng: "pl", // or whatever default you like
+  lng: "pl", // Default language
+  fallbackLng: "pl", // Fallback language
+  interpolation: {
+    escapeValue: false,
+  },
   resources: {
     en: {
       translation: enCommon,
